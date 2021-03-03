@@ -39,6 +39,7 @@ div.product-details {
 
   div.cart-button {
     position: fixed;
+    background-attachment: fixed;
     bottom: 6vh;
     width: 24vw;
 
@@ -47,6 +48,8 @@ div.product-details {
       min-width: 90vw;
       max-width: 90vw;
       bottom: 1vh;
+      position: fixed;
+      background-attachment: fixed;
     }
 
     button {
