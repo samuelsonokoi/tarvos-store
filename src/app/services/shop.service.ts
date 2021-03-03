@@ -67,6 +67,7 @@ export class ShopService {
       bgColor: '#fceaf2'
     },
   ]);
+  cart = [];
 
   constructor() { }
 
@@ -85,4 +86,9 @@ export class ShopService {
   removeFromFavorite = (index: number) => {
     this.productList[index].favorite = false;
   }
+
+  addToCart = (product: IProduct) => {
+
+  }
+
 }
