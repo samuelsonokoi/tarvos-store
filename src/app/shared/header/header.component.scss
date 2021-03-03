@@ -4,7 +4,7 @@ header {
   z-index: 500;
   top: 2.5em;
   padding: 1em 0.5em;
-  background-color: transparent;
+  background-color: inherit;
   min-width: 27vw;
   max-width: 27vw;
   min-height: 10vh;
@@ -37,7 +37,7 @@ header {
 
   div.right-corner {
     position: absolute;
-    right: 0;
+    right: 0.5em;
     padding-top: 1em;
 
     span.badge {
