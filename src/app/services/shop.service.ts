@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { ICart } from '../models/cart.interface';
+import { initCart } from '../models/cart.model';
 import { IProduct } from '../models/product.interface';
 
 @Injectable({
@@ -69,6 +72,8 @@ export class ShopService {
     },
   ]);
   cart: ICart[] = [];
+  private cartSubject = new BehaviorSubject<ICart[]>([]);
+  cartState = this.cartSubject.asObservable();
 
   constructor() { }
 
@@ -90,6 +95,12 @@ export class ShopService {
 
   addToCart = (cart: ICart) => {
     this.cart.push(cart);
+    this.cartSubject.next(this.cart);
+  }
+
+  removeFromCart = (index: number) => {
+    this.cart.splice(index, 1);
+    this.cartSubject.next(this.cart);
   }
 
 }
