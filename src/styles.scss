@@ -3,7 +3,7 @@
 body,
 html {
   font-family: 'Rubik', sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f9f9f9;
 }
 
@@ -26,9 +26,19 @@ html {
     margin: auto;
     min-width: 27vw;
     max-width: 27vw;
-    height: 90vh;
+    min-height: 90vh;
+    max-height: 90vh;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     background-color: #fff;
+
+    // media queries
+    @media only screen and (max-width: 480px) {
+      /* For mobile phones: */
+      min-width: 100vw;
+      max-width: 100vw;
+      min-height: 100vh;
+      max-height: 100vh;
+    }
   }
 }
 
@@ -40,6 +50,15 @@ section.products {
   overflow-y: auto;
   margin-top: 5.5em;
   position: relative;
+
+  // media queries
+  @media only screen and (max-width: 480px) {
+    /* For mobile phones: */
+    min-width: 100vw;
+    max-width: 100vw;
+    min-height: 88vh;
+    max-height: 88vh;
+  }
 
   .product {
     padding: 1em;
@@ -102,21 +121,5 @@ section.products {
     background-color: #000000;
     border-color: #000000;
     font-size: 14px;
-  }
-}
-
-
-@media (max-width: 480px) {
-  div.main-container div.screen {
-    min-width: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  div.main-container div.screen {
-    min-width: 100%;
-    max-width: 100%;
   }
 }

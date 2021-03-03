@@ -4,10 +4,16 @@ div.product {
 
 div.product-details {
   padding: 1em 1.5em;
-  min-width: inherit;
   min-width: 27vw;
   max-width: 27vw;
   line-height: 1.2em;
+
+  @media only screen and (max-width: 480px) {
+    /* For mobile phones: */
+    min-width: 100vw;
+    max-width: 100vw;
+    line-height: normal;
+  }
   
   span {
     font-size: 14px;
@@ -35,6 +41,13 @@ div.product-details {
     position: fixed;
     bottom: 6vh;
     width: 24vw;
+
+    @media only screen and (max-width: 480px) {
+      /* For mobile phones: */
+      min-width: 90vw;
+      max-width: 90vw;
+      bottom: 1vh;
+    }
 
     button {
       width: 16em;
