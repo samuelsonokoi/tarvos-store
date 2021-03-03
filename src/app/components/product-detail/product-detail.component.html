@@ -16,9 +16,9 @@
     </div>
 
     <div class="bottom-buttons d-flex">
-      <span>S</span>
-      <span>M</span>
-      <span>L</span>
+      <span (click)="selectSize('S')" [ngClass]="{'selected': selectedSize === 'S'}">S</span>
+      <span (click)="selectSize('M')" [ngClass]="{'selected': selectedSize === 'M'}">M</span>
+      <span (click)="selectSize('L')" [ngClass]="{'selected': selectedSize === 'L'}">L</span>
     </div>
   </div>
 

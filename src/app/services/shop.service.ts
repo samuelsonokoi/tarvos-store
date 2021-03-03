@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ICart } from '../models/cart.interface';
 import { IProduct } from '../models/product.interface';
 
 @Injectable({
@@ -67,7 +68,7 @@ export class ShopService {
       bgColor: '#fceaf2'
     },
   ]);
-  cart = [];
+  cart: ICart[] = [];
 
   constructor() { }
 
@@ -87,8 +88,8 @@ export class ShopService {
     this.productList[index].favorite = false;
   }
 
-  addToCart = (product: IProduct) => {
-
+  addToCart = (cart: ICart) => {
+    this.cart.push(cart);
   }
 
 }

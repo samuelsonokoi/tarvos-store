@@ -6,6 +6,6 @@ export const initCart: ICart = {
   summary: '',
   price: 0,
   bgColor: '',
-  images: '',
+  image: '',
   quantity: 0
 };
