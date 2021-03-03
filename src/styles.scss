@@ -14,19 +14,19 @@ html {
   width: 100%;
   justify-content: center;
   align-items: center;
-}
-
-.screen {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center !important;
-  border-radius: 10px;
-  padding: 0;
-  overflow: hidden;
-  margin: auto;
-  min-width: 27vw;
-  height: 90vh !important;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-  background-color: #fff;
+  
+  .screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center !important;
+    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
+    margin: auto;
+    min-width: 27vw;
+    height: 90vh !important;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+  }
 }

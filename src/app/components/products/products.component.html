@@ -1,5 +1,5 @@
-<div class="row">
-  <div class="col-12">
-
+<section class="products">
+  <div class="product" *ngFor="let product of products" [ngStyle]="{'background-color': product.bgColor}">
+    <h4>{{product.name}}</h4>
   </div>
-</div>
+</section>

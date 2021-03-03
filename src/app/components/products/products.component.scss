@@ -1,0 +1,11 @@
+section.products {
+  height: 78vh;
+  overflow-x: auto;
+  overflow-y: auto;
+  margin-top: 5.5em;
+  min-width: 53vh;
+
+  .product {
+    margin: 0;
+  }
+}
