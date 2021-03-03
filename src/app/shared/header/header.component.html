@@ -1,19 +1,26 @@
-<header>
+<header [ngClass]="{'box-shadow': cartView}">
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-12">
         <div class="d-flex">
           <div class="menu">
-            <a [routerLink]="['/']">
+            <a [routerLink]="['/']" *ngIf="productsView">
               <i class="fa fa-bars"></i>
             </a>
+            <a [routerLink]="['/']" *ngIf="detailsView">
+              <i class="fa fa-angle-left fa-2x"></i>
+            </a>
+            <a [routerLink]="['/']" *ngIf="cartView">
+              <i class="fa fa-angle-left"></i>
+              <span class="ml-2">Shopping Cart</span>
+            </a>
           </div>
-          <div class="logo">
+          <div class="logo" *ngIf="!cartView">
             <a [routerLink]="['/']">
               <img src="./assets/images/logo.svg" alt="Logo" class="img-fluid">
             </a>
           </div>
-          <div class="right-corner">
+          <div class="right-corner" *ngIf="!cartView">
             <a [routerLink]="['/']" class="mr-4">
               <img src="./assets/images/search.svg" alt="Search" class="img-fluid">
             </a>

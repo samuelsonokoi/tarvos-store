@@ -56,7 +56,8 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
         quantity: 1,
         image: this.product.images[0],
         size: this.selectedSize,
-        newPrice: this.product.price
+        newPrice: this.product.price,
+        productId: this.product.id
       };
       this.shopService.addToCart(cartData);
     } else {

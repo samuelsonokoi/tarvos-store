@@ -5,18 +5,45 @@
         <img [src]="cartItem.image" [alt]="cartItem.name" class="img-fluid" />
       </div>
       <div class="product-description">
-        <h6>{{cartItem.name}}</h6>
+        <h6> <a [routerLink]="[ '/product', cartItem.productId ]">{{cartItem.name}}</a></h6>
         <div class="price">
           <span>{{cartItem.price | currency: '₦'}} <small>{{cartItem.summary}}</small></span>
         </div>
         <small class="price">Size: {{cartItem.size }}</small> <br>
-        <small class="remove">REMOVE</small>
+        <small class="remove" (click)="remove(i)">REMOVE</small>
       </div>
       <div class="action-buttons">
         <i class="fa fa-plus" (click)="increaseQuantity(i)"></i>
         <small class="quantity">{{cartItem.quantity}}</small>
         <i class="fa fa-minus" (click)="decreaseQuantity(i)"></i>
       </div>
+    </div>
+  </div>
+
+  <div class="empty-cart" *ngIf="cart.length === 0">
+    <h3 class="text-center"><i class="fa fa-shopping-cart fa-2x"></i></h3>
+    <p class="text-center">Nothing here</p>
+    <a [routerLink]="['/']">Continue shopping</a>
+  </div>
+
+  <div class="cart-total">
+    <span class="mb-4">Cart Details</span>
+
+    <div class="mt-2 mb-5">
+      <span class="float-left">Total Amount</span>
+      <span class="float-right">{{totalAmount | currency: '₦'}}</span>
+      <br>
+      <span class="float-left">Discount</span>
+      <span class="float-right">{{0 | currency: '₦'}}</span>
+      <br>
+      <hr>
+
+      <span class="float-left">Final Amount</span>
+      <span class="float-right">{{totalAmount | currency: '₦'}}</span>
+    </div>
+
+    <div class="cart-button text-center">
+      <button type="button" [disabled]="cart.length === 0" class="btn btn-dark">CHECKOUT</button>
     </div>
   </div>
 </section>

@@ -2,6 +2,7 @@ import { ICart } from './cart.interface';
 
 export const initCart: ICart = {
   id: 0,
+  productId: 0,
   name: '',
   summary: '',
   price: 0,

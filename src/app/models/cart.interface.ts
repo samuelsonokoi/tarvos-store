@@ -8,4 +8,5 @@ export interface ICart {
   bgColor: string;
   quantity: number;
   size: string;
+  productId: number;
 }

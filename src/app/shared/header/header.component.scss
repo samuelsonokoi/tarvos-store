@@ -5,7 +5,8 @@ header {
   top: 2.5em;
   padding: 1em 0.5em;
   background-color: transparent;
-  width: 45%;
+  min-width: 27vw;
+  max-width: 27vw;
 
   div.menu {
     padding-top: 1em;
@@ -13,6 +14,7 @@ header {
 
     a, a:active, a:hover{
       color: #000;
+      text-decoration: none;
     }
   }
 
@@ -34,4 +36,8 @@ header {
       font-size: 8px;
     }
   }
+}
+
+.box-shadow {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }

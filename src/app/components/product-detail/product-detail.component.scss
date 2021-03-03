@@ -5,7 +5,8 @@ div.product {
 div.product-details {
   padding: 1em 1.5em;
   min-width: inherit;
-  width: 40vw !important;
+  min-width: 27vw;
+  max-width: 27vw;
   line-height: 1.2em;
   
   span {
@@ -33,7 +34,7 @@ div.product-details {
   div.cart-button {
     position: fixed;
     bottom: 6vh;
-    width: 40vw;
+    width: 24vw;
 
     button {
       width: 16em;
