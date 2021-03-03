@@ -12,7 +12,9 @@ export class ShopService {
       price: 1500,
       favorite: false,
       summary: 'Unisex Pack Of 2',
-      images: [],
+      images: [
+        './assets/images/Image 32.png'
+      ],
       bgColor: '#c3e5e4'
     },
     {
@@ -21,7 +23,9 @@ export class ShopService {
       price: 2500,
       favorite: false,
       summary: 'Unisex Pack Of 3',
-      images: [],
+      images: [
+        './assets/images/Image 36.png'
+      ],
       bgColor: '#e6e6e6'
     },
     {
@@ -30,7 +34,9 @@ export class ShopService {
       price: 3500,
       favorite: false,
       summary: 'Unisex Pack Of 2',
-      images: [],
+      images: [
+        './assets/images/Image 37.png'
+      ],
       bgColor: '#d1d4d8'
     },
     {
@@ -39,7 +45,9 @@ export class ShopService {
       price: 4500,
       favorite: false,
       summary: 'Unisex Pack Of 3',
-      images: [],
+      images: [
+        './assets/images/Image 39.png'
+      ],
       bgColor: '#f7f0e5'
     },
     {
@@ -48,7 +56,9 @@ export class ShopService {
       price: 5500,
       favorite: false,
       summary: 'Unisex Pack Of 2',
-      images: [],
+      images: [
+        './assets/images/Image 42.png'
+      ],
       bgColor: '#fceaf2'
     },
   ]);
@@ -61,5 +71,13 @@ export class ShopService {
 
   getProductById = (id: number): IProduct => {
     return this.productList.filter(product => product.id === id)[0];
+  }
+
+  addToFavorite = (index: number) => {
+    this.productList[index].favorite = true;
+  }
+
+  removeFromFavorite = (index: number) => {
+    this.productList[index].favorite = false;
   }
 }

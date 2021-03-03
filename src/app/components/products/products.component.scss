@@ -6,6 +6,29 @@ section.products {
   min-width: 53vh;
 
   .product {
-    margin: 0;
+    padding: 1em;
+    cursor: pointer;
+
+    h5 a, h5 a:active, h5 a:link {
+      color: #000;
+      text-decoration: none;
+    }
+
+    img {
+      margin: 0 auto;
+      display: block;
+    }
+
+    span.price {
+      font-size: 16px;
+    }
+
+    span.summary {
+      font-size: 12px;
+    }
+    
+    span.favorite {
+      cursor: pointer;
+    }
   }
 }
