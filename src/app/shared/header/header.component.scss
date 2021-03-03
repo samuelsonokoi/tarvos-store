@@ -1,0 +1,29 @@
+header {
+  position: absolute;
+  background-attachment: fixed;
+  z-index: 500;
+  top: 2.5em;
+  padding: 1em 0.5em;
+  background-color: transparent;
+  backdrop-filter: grayscale(0.5) opacity(0.8);
+
+  div.menu {
+    padding-top: 1em;
+
+    a, a:active, a:hover{
+      color: #000;
+    }
+  }
+
+  div.logo {
+    margin: 0 auto;
+    width: 20em;
+    text-align: center;
+  }
+
+  div.right-corner {
+    position: absolute;
+    right: 0;
+    padding-top: 1em;
+  }
+}
