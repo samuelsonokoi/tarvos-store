@@ -103,4 +103,9 @@ export class ShopService {
     this.cartSubject.next(this.cart);
   }
 
+  checkout = () => {
+    this.cart = [];
+    this.cartSubject.next(this.cart);
+  }
+
 }

@@ -65,9 +65,9 @@ export class CartComponent implements OnInit, OnDestroy {
   }
 
   checkout = () => {
-    this.cart = [];
     this.checkedOut = true;
     this.totalAmount = 0;
+    this.shopService.checkout();
   }
 
 }
