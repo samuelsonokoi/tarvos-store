@@ -20,10 +20,15 @@
     </div>
   </div>
 
-  <div class="empty-cart" *ngIf="cart.length === 0">
+  <div class="empty-cart" *ngIf="cart.length === 0 && !checkedOut">
     <h3 class="text-center"><i class="fa fa-shopping-cart fa-2x"></i></h3>
     <p class="text-center">Nothing here</p>
     <a [routerLink]="['/']">Continue shopping</a>
+  </div>
+
+  <div class="empty-cart" *ngIf="cart.length === 0 && checkedOut" [ngClass]="{'text-primary': checkedOut}">
+    <h3 class="text-center"><i class="fa fa-check-circle-o fa-2x"></i></h3>
+    <p class="text-center">Thank you!</p>
   </div>
 
   <div class="cart-total">
@@ -43,7 +48,7 @@
     </div>
 
     <div class="cart-button text-center">
-      <button type="button" [disabled]="cart.length === 0" class="btn btn-dark">CHECKOUT</button>
+      <button type="button" [disabled]="cart.length === 0" class="btn btn-dark" (click)="checkout()">CHECKOUT</button>
     </div>
   </div>
 </section>

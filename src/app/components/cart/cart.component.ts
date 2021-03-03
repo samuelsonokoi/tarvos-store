@@ -13,6 +13,7 @@ export class CartComponent implements OnInit, OnDestroy {
   subscription: Subscription = new Subscription();
   cart: ICart[] = [];
   totalAmount = 0;
+  checkedOut = false;
 
   constructor(private shopService: ShopService) { }
 
@@ -25,6 +26,10 @@ export class CartComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
+
+    if (this.checkedOut) {
+      this.checkedOut = false;
+    }
   }
 
   calculateTotalAmount = () => {
@@ -57,6 +62,12 @@ export class CartComponent implements OnInit, OnDestroy {
     if (confirmRemove) {
       this.cart.splice(index, 1);
     }
+  }
+
+  checkout = () => {
+    this.cart = [];
+    this.checkedOut = true;
+    this.totalAmount = 0;
   }
 
 }
