@@ -1,3 +1,22 @@
 <section class="products">
-
+  <div class="cart-list" *ngIf="cart.length > 0">
+    <div class="d-flex mb-3" *ngFor="let cartItem of cart; let i = index">
+      <div class="product-image mr-2" [ngStyle]="{'background-color': cartItem.bgColor}">
+        <img [src]="cartItem.image" [alt]="cartItem.name" class="img-fluid" />
+      </div>
+      <div class="product-description">
+        <h6>{{cartItem.name}}</h6>
+        <div class="price">
+          <span>{{cartItem.price | currency: '₦'}} <small>{{cartItem.summary}}</small></span>
+        </div>
+        <small class="price">Size: {{cartItem.size }}</small> <br>
+        <small class="remove">REMOVE</small>
+      </div>
+      <div class="action-buttons">
+        <i class="fa fa-plus" (click)="increaseQuantity(i)"></i>
+        <small class="quantity">{{cartItem.quantity}}</small>
+        <i class="fa fa-minus" (click)="decreaseQuantity(i)"></i>
+      </div>
+    </div>
+  </div>
 </section>

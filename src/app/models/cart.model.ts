@@ -5,7 +5,9 @@ export const initCart: ICart = {
   name: '',
   summary: '',
   price: 0,
+  newPrice: 0,
   bgColor: '',
   image: '',
-  quantity: 0
+  quantity: 0,
+  size: ''
 };
