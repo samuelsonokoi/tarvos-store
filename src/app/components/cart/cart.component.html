@@ -26,9 +26,9 @@
     <a [routerLink]="['/']">Continue shopping</a>
   </div>
 
-  <div class="empty-cart" *ngIf="cart.length === 0 && checkedOut" [ngClass]="{'text-primary': checkedOut}">
-    <h3 class="text-center"><i class="fa fa-check-circle-o fa-2x"></i></h3>
-    <p class="text-center">Thank you!</p>
+  <div class="empty-cart" *ngIf="cart.length === 0 && checkedOut" [ngClass]="{'text-success': checkedOut}">
+    <h3 class="text-center"><i class="fa fa-check fa-2x"></i></h3>
+    <p class="text-center">Thank you for shopping with us!</p>
   </div>
 
   <div class="cart-total">
