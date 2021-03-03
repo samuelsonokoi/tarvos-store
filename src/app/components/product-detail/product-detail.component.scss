@@ -1,0 +1,44 @@
+div.product {
+  padding: 1em 1.5em;
+}
+
+div.product-details {
+  padding: 1em 1.5em;
+  min-width: inherit;
+  width: 40vw !important;
+  line-height: 1.2em;
+  
+  span {
+    font-size: 14px;
+  }
+
+  span.read-more {
+    color: rgb(109, 3, 3);
+    cursor: pointer;
+  }
+
+  span.spec {
+    background-color: #eee;
+    width: fit-content;
+    padding: 0.3em 0.8em;
+    display: block;
+  }
+
+  div.spec-list {
+    span {
+      display: block;
+    }
+  }
+
+  div.cart-button {
+    position: fixed;
+    bottom: 6vh;
+    width: 40vw;
+
+    button {
+      width: 16em;
+      border-radius: 2em;
+      padding: 0.5em;
+    }
+  }
+}

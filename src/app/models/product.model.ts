@@ -7,5 +7,6 @@ export const initProduct: IProduct = {
   price: 0,
   favorite: false,
   bgColor: '',
+  description: '',
   images: []
 };

@@ -12,6 +12,7 @@ export class ShopService {
       price: 1500,
       favorite: false,
       summary: 'Unisex Pack Of 2',
+      description: `100% Original Products <br>This item is not returnable. Items like inner-wear, personal care, make-up, socks and certain accessories do not come under our return policy.`,
       images: [
         './assets/images/Image 32.png'
       ],
@@ -23,6 +24,7 @@ export class ShopService {
       price: 2500,
       favorite: false,
       summary: 'Unisex Pack Of 3',
+      description: `100% Original Products <br>This item is not returnable. Items like inner-wear, personal care, make-up, socks and certain accessories do not come under our return policy.`,
       images: [
         './assets/images/Image 36.png'
       ],
@@ -34,6 +36,7 @@ export class ShopService {
       price: 3500,
       favorite: false,
       summary: 'Unisex Pack Of 2',
+      description: `100% Original Products <br>This item is not returnable. Items like inner-wear, personal care, make-up, socks and certain accessories do not come under our return policy.`,
       images: [
         './assets/images/Image 37.png'
       ],
@@ -45,6 +48,7 @@ export class ShopService {
       price: 4500,
       favorite: false,
       summary: 'Unisex Pack Of 3',
+      description: `100% Original Products <br>This item is not returnable. Items like inner-wear, personal care, make-up, socks and certain accessories do not come under our return policy.`,
       images: [
         './assets/images/Image 39.png'
       ],
@@ -56,6 +60,7 @@ export class ShopService {
       price: 5500,
       favorite: false,
       summary: 'Unisex Pack Of 2',
+      description: `100% Original Products <br>This item is not returnable. Items like inner-wear, personal care, make-up, socks and certain accessories do not come under our return policy.`,
       images: [
         './assets/images/Image 42.png'
       ],

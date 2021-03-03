@@ -36,11 +36,15 @@ section.products {
   overflow-x: auto;
   overflow-y: auto;
   margin-top: 5.5em;
-  min-width: 45vw;
+  min-width: 45vw !important;
 
   .product {
     padding: 1em;
     cursor: pointer;
+
+    img {
+      height: 8em;
+    }
 
     h5 a, h5 a:active, h5 a:link {
       color: #000;
@@ -63,5 +67,33 @@ section.products {
     span.favorite {
       cursor: pointer;
     }
+    
+    div.bottom-buttons {
+      position: relative;
+      margin-bottom: -2em;
+      
+      span {
+        transition: all ease-in-out 0.3s;
+        box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+        padding: 0.2em 0.65em;
+        cursor: pointer;
+        border-radius: 50%;
+        margin-right: 1em;
+        background-color: #fff;
+      }
+      
+      span:hover {
+        background-color: #000;
+        color: #fff
+      }
+    
+    }
+  }
+
+  .btn-dark {
+    color: #fff;
+    background-color: #000000;
+    border-color: #000000;
+    font-size: 14px;
   }
 }
