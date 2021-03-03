@@ -1,1 +1,16 @@
-<p>product-detail works!</p>
+<section class="products">
+  <div class="product" [ngStyle]="{'background-color': product.bgColor}">
+    <img class="img-fluid" [alt]="product.name" [src]="product.images[0]" />
+    <h5 class="mt-2">
+      <a [routerLink]="[ '/product', product.id ]">{{product.name}}</a>
+    </h5>
+    <span class="price mr-3">{{product.price | currency: '₦'}}</span>
+    <span class="summary">{{product.summary}}</span>
+    <span class="favorite float-right" (click)="addToFavorite()" *ngIf="!product.favorite">
+      <i class="fa fa-heart-o"></i>
+    </span>
+    <span class="favorite float-right" (click)="removeFromFavorite()" *ngIf="product.favorite">
+      <i class="fa fa-heart" style="color: rgb(109, 3, 3)"></i>
+    </span>
+  </div>
+</section>

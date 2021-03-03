@@ -1,5 +1,6 @@
 <section class="products">
-  <div class="product" *ngFor="let product of products; index as i" [ngStyle]="{'background-color': product.bgColor}">
+  <div class="product" *ngFor="let product of products; index as i" [ngStyle]="{'background-color': product.bgColor}"
+    (click)="clicked(product.id)">
     <img class="img-fluid" [alt]="product.name" [src]="product.images[0]" />
     <h5 class="mt-2">
       <a [routerLink]="[ '/product', product.id ]">{{product.name}}</a>

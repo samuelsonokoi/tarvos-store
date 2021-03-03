@@ -25,4 +25,8 @@ export class ProductsComponent implements OnInit {
     this.shopService.removeFromFavorite(index);
   }
 
+  clicked = (id: number) => {
+    this.router.navigate(['/product', id]);
+  }
+
 }
